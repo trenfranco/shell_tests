@@ -15,10 +15,10 @@
 ### *How to use:*
 -----
 
-Compile your files using: **gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh***
-Clone this repo using:   **git clone https://github.com/Nachop51/shell_tests.git**
-Copy or move the file `tests` to where your /hsh is.
-Execute `tests` using **./tests**
+- Compile your files using: **gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh***
+- Clone this repo using:   **git clone https://github.com/Nachop51/shell_tests.git**
+- Copy or move the file `tests` to where your /hsh is.
+- Execute `tests` using **./tests**
 
 ##### **By:**
 [Maria Eugenia Matto](https://www.linkedin.com/in/maria-matto/)
