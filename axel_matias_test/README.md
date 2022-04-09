@@ -12,10 +12,10 @@ The aim of this project is to contribute with some tests for our partners Shells
 
 ## How to use
 
-- Clone our directory to your working space or copy the content of hsh_vs_sh into a text file.
+- Clone this repository to your working space and copy /shell_tests/hsh_vs_sh into where you hold all your Shell files.
 
 ```bash
-  git clone 
+  git clone https://github.com/Nachop51/shell_tests.git
 ```
 
 - Compile your Shell code this way
@@ -24,11 +24,10 @@ The aim of this project is to contribute with some tests for our partners Shells
   gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -g -o hsh 
 ```
 
-- Move the file "hsh_vs_sh" from the folder you clone in previous steps to the folder where you compile (or use absolute paths to execute the "cat" command)
-- Introduce the following command
+- Introduce the following command (if you didnt copy the file to your folder you can use "pwd hsh_vs_sh" to get the absolute path of the test file and use it instead of the relative path "hsh_vs_sh_")
 
 ```bash
-   cat hsh_vs_sh | valgrind --track-origins=yes --leak-check=full ./hsh
+   cat hsh__vs_sh | valgrind --track-origins=yes --leak-check=full ./hsh
 ```
 
 This way you are going to be checking your shell behaviour but also if there is any memory leak or error in the process.
