@@ -1,4 +1,4 @@
-HELL TEST SUITE
+(S)HELL TEST SUITE
 
 ## Description
 The aim of this project is to contribute with some tests for our partners Shells. Our test file covers every task you can find on 0x16. C - Simple Shell but we found especially useful to handle message errors.
