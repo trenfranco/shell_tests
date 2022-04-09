@@ -4,7 +4,7 @@
 The aim of this project is to contribute with some tests for our partners Shells. Our test file covers every task you can find on 0x16. C - Simple Shell but we found especially useful to handle message errors.
 ## Content
 
-[hsh_vs_sh](https://github.com/MatiasMtz/holberton-system_engineering-devops/tree/main/0x00-shell_basics) Text file has four sections: 
+[hsh_vs_sh](https://github.com/Nachop51/shell_tests/blob/main/axel_matias_test/hsh_vs_sh) Text file has four sections: 
 - Basic tests: Here you can find tests like typing random letters, pressing "enter" or "tab" buttons, handling dots, among others
 - Absolute Path tests: As the name says the Absolute Path main function is to check commands with the full directory path plus the file name. An example could be: /usr/bin/ls
 - Relative Path tests: First, we have to define Relative Paths, mainly, they are the path related to the present working directory. So, our tests checks if commands introduced in this way also works properly. Taking the previous example about Absolute Paths, the Relative Path of "/usr/bin/ls" is "ls".
