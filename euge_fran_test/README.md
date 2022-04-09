@@ -1,8 +1,8 @@
 # `Test suite`
-### *What cases the tests cover:*
+## *What cases the tests cover:*
 ---------
 
-######  The `tests` file (script) contains some basic tests for us the students to check our own simple shell:
+####  The `tests` file (script) contains some basic tests for us the students to check our own simple shell:
 - Multiple commands tests
 - Multiple command arguments
 - Tests commands with spaces
@@ -12,12 +12,12 @@
 - env built-in
 - Multiple arguments using a single flag
 - And more.
-### *How to use:*
+## *How to use:*
 -----
 
 - Compile your files using: **gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh***
 - Clone this repo using:   **git clone https://github.com/Nachop51/shell_tests.git**
-- Copy or move the file `tests` to where your /hsh is.
+- Copy or move the file `tests` to where your /hsh is. (Or move your hsh to euge_fran_test file).
 - Execute `tests` using **./tests**
 
 ##### **By:**
