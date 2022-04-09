@@ -1,0 +1,136 @@
+#!/bin/bash
+
+cont=1
+# se intento lo de los errores :_jaja
+success="-----------------------------SUCCESS---------------------------------"
+error="--------------------------------ERROR----------------------------------"
+shell="" 
+hsh=""
+
+stest(){
+
+echo -e "\e[1;34m######################################################################\e[0m"
+
+#if [ "$DIFF" == "" ]; then
+#	echo -e "\e[32m$success\e[0m"
+#else
+#	echo -e "\e[1;31m$error\e[0m"
+#	cont=$((cont+1))
+#fi
+
+}
+
+
+
+echo
+echo -e "\e[0;36m######################################################################\e[0m"
+echo -e "\e[0;36m################## >>> WELCOME TO TESTARDO :v <<< ####################\e[0m"
+echo -e "\e[0;36m######################################################################\e[0m"
+echo
+echo -e "\e[0;37mThe test compares your own shell against sh, it will appear first the sh result and then your own shell result\e[0m"
+echo 
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"
+echo -e "\e[1;36m		Test in non-interactive mode, command 'ls -a -S -h -d -F -i -r -R -s'\e[0m" ;
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"; echo ; echo ">>>>>>> sh result <<<<<<<" ; echo; 
+echo ls -a -S -h -d -F -i -r -R -s | /bin/sh ;echo ; echo ">>>>>>> your shell result <<<<<<<"; echo; 
+echo ls -a -S -h -d -F -i -r -R -s | ./hsh ;echo ;echo;
+
+stest
+
+echo
+
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"
+echo -e "\e[1;36m          Test in non-interactive mode, command \e[0m"
+echo "				\n"
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"; echo ; echo ">>>>>>> sh result <<<<<<<" ; echo;
+echo \n | /bin/sh > shell.txt ; echo ; echo ">>>>>>> your shell result <<<<<<<"; echo;
+echo \n | ./hsh > hsh.txt ; echo; echo ;
+
+stest
+
+echo
+
+
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"
+echo -e "\e[1;36m          Test in non-interactive mode, command \e[0m" ;
+echo "                          \n\n\n"
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"; echo ; echo ">>>>>>> sh result <<<<<<<" ; echo;
+echo \n\n\n | /bin/sh ; echo ; echo ">>>>>>> your shell result <<<<<<<"; echo;
+echo \n\n\n | ./hsh ; echo; stest  ; echo
+
+
+
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"
+echo -e "\e[1;36m          Test in non-interactive mode, command '          ls -sah'\e[0m" ;
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"; echo ; echo ">>>>>>> sh result <<<<<<<" ; echo;
+echo "          ls -sah" | /bin/sh ; echo ; echo ">>>>>>> your shell result <<<<<<<"; echo;
+echo "          ls -sah" | ./hsh ; echo ; stest  ; echo
+
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"
+echo -e "\e[1;36m          Test in non-interactive mode, command '          '\e[0m" ;
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"; echo ; echo ">>>>>>> sh result <<<<<<<" ; echo;
+echo "          " | /bin/sh ; echo ; echo ">>>>>>> your shell result <<<<<<<"; echo;
+echo "          " | ./hsh ; echo ; stest  ; echo
+
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"
+echo -e "\e[1;36m          Test in non-interactive mode, command 'ls ls'\e[0m" ;
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"; echo ; echo ">>>>>>> sh result <<<<<<<" ; echo;
+echo "ls ls" | /bin/sh ; echo ; echo ">>>>>>> your shell result <<<<<<<"; echo;
+echo "ls ls" | ./hsh ; echo ; stest  ; echo
+
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"
+echo -e "\e[1;36m   Advanced exe: Test in non-interactive mode, command 'env env'\e[0m" ;
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"; echo ; echo ">>>>>>> sh result <<<<<<<" ; echo;
+echo "env env" | /bin/sh ; echo ; echo ">>>>>>> your shell result <<<<<<<"; echo;
+echo "env env" | ./hsh ; echo ; stest  ; echo
+
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"
+echo -e "\e[1;36m   Test in non-interactive mode command: 
+'ls
+     ls
+     ls     
+       ls     '\e[0m" ;
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"; echo ; echo ">>>>>>> sh result <<<<<<<" ; echo;
+echo 'ls
+     ls
+          ls
+	         ls     '| /bin/sh ; echo ; echo ">>>>>>> your shell result <<<<<<<"; echo;
+echo 'ls
+     ls
+          ls
+	         ls     '| ./hsh ; echo ;stest  ; echo
+
+
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"
+echo -e "\e[1;36m          Test in non-interactive mode, command 'exit exit'\e[0m" ;
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"; echo ; echo ">>>>>>> sh result <<<<<<<" ; echo;
+echo "exit exit" | /bin/sh; echo ; echo ">>>>>>> your shell result <<<<<<<"; echo;
+echo "exit exit" | ./hsh ; echo ; stest ; echo
+
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"
+echo -e "\e[1;36m          Test in non-interactive mode, command
+'anasheiiii
+omg nooo wooow
+        ls
+	                hola como estan amigos
+			                ls'\e[0m" ;
+echo -e "\e[1;36m----------------------------------------------------------------------\e[0m"; echo ; echo ">>>>>>> sh result <<<<<<<" ; echo;
+echo 'anasheiiii
+omg nooo wooow
+        ls
+	                hola como estan amigos
+			                ls' | /bin/sh; echo ; echo ">>>>>>> your shell result <<<<<<<"; echo;
+echo 'anasheiiii
+omg nooo wooow
+        ls
+	                hola como estan amigos
+			                ls'| ./hsh ; echo ; stest ; echo
+
+
+echo -e "\e[0;35m______________________________________________________________________\e[0m"
+echo -e "\e[0;35m----------------------------------------------------------------------\e[0m"
+echo -e "\e[0;35m----------------------\e[0m\e[1;35m   END   TEST   \e[0m\e[0;35m--------------------------------\e[0m"
+echo -e "\e[0;35m----------------------------------------------------------------------\e[0m"
+echo -e "\e[0;35m----------\e[0m\e[1;35m♥ by Eugenia Matto & Franco Trenche ♥\e[0m\e[0;35m-----------------------\e[0m"
+echo -e "\e[0;35m----------------------------------------------------------------------\e[0m"
+echo -e "\e[0;35m______________________________________________________________________\e[0m"
